@@ -27,17 +27,17 @@ Write a Python program that takes input from the user to create a list of intege
   ```
 """
 
-# Input
-input_numbers = input("Enter a series of space-separated integers: ")
-
-# Convert Input:
-input_list = [int(num) for num in input_numbers.split()]
-
-# Sorting:
-numbers_list = sorted(input_list)
-
-# Print Output
-print("Sorted list:", numbers_list)
+# # Input
+# input_numbers = input("Enter a series of space-separated integers: ")
+#
+# # Convert Input:
+# input_list = [int(num) for num in input_numbers.split()]
+#
+# # Sorting:
+# numbers_list = sorted(input_list)
+#
+# # Print Output
+# print("Sorted list:", numbers_list)
 
 """-----------------------------------------------------------------------------
 
@@ -70,18 +70,20 @@ Extend the previous Python program to include tuples. Now, in addition to creati
   ```
 """
 
-# # Input
-# input_numbers = input("Enter a series of space-separated integers: ")
-#
-# # Convert Input:
-#
-#
-# # Sorting:
-#
-#
-# # Print Output
-# print("Sorted list:", numbers_list)
-# print("Sorted tuple:", sorted_tuple)
+# Input
+input_numbers = input("Enter a series of space-separated integers: ")
+
+# Convert Input:
+numbers_list = [int(num) for num in input_numbers.split()]
+numbers_tuple = tuple(numbers_list)
+
+# Sorting:
+sorted_list = sorted(numbers_list)
+sorted_tuple = tuple(sorted_list)
+
+# Print Output
+print("Sorted list:", sorted_list)
+print("Sorted tuple:", sorted_tuple)
 
 """5.
 Extend the previous Python program to demonstrate the manipulation of lists using the append(), insert(), and remove() functions, and to emphasize the immutability of tuples.
