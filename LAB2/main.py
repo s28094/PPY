@@ -70,20 +70,20 @@ Extend the previous Python program to include tuples. Now, in addition to creati
   ```
 """
 
-# Input
-input_numbers = input("Enter a series of space-separated integers: ")
-
-# Convert Input:
-numbers_list = [int(num) for num in input_numbers.split()]
-numbers_tuple = tuple(numbers_list)
-
-# Sorting:
-sorted_list = sorted(numbers_list)
-sorted_tuple = tuple(sorted_list)
-
-# Print Output
-print("Sorted list:", sorted_list)
-print("Sorted tuple:", sorted_tuple)
+# # Input
+# input_numbers = input("Enter a series of space-separated integers: ")
+#
+# # Convert Input:
+# numbers_list = [int(num) for num in input_numbers.split()]
+# numbers_tuple = tuple(numbers_list)
+#
+# # Sorting:
+# sorted_list = sorted(numbers_list)
+# sorted_tuple = tuple(sorted_list)
+#
+# # Print Output
+# print("Sorted list:", sorted_list)
+# print("Sorted tuple:", sorted_tuple)
 
 """5.
 Extend the previous Python program to demonstrate the manipulation of lists using the append(), insert(), and remove() functions, and to emphasize the immutability of tuples.
@@ -108,34 +108,41 @@ Extend the previous Python program to demonstrate the manipulation of lists usin
   ```
 """
 
-# # Input
-# input_numbers = input("Enter a series of space-separated integers: ")
-#
-# # Convert Input
-#
-#
-# # Manipulate List
-# #   Append 10 to the list
-# #   Insert 20 at index 2
-# #   Remove one elementfrom the list
-#
-# # Attempt to Modify Tuple (this will raise an error)
-# try:
-#     #   Append 10 to the tuple
-# except AttributeError:
-#     print("Tuples are immutable and cannot be modified.")
-# try:
-#     #   Insert 20 at index 2
-# except AttributeError:
-#     pass  # Insert operation will also raise an error
-# try:
-#     #   Remove one element  from the tuple
-# except AttributeError:
-#     pass  # Remove operation will also raise an error
-#
-# # Print Output
-# print("Modified list:", numbers_list)
-# print("Tuple remains unchanged:", numbers_tuple)
+# Input
+input_numbers = input("Enter a series of space-separated integers: ")
+
+# Convert Input
+numbers_list = [int(num) for num in input_numbers.split()]
+numbers_tuple = tuple(numbers_list)
+
+# Manipulate List
+#   Append 10 to the list
+numbers_list.append(10)
+#   Insert 20 at index 2
+numbers_list.insert(2, 20)
+#   Remove one elementfrom the list
+numbers_list.remove(8)
+
+# Attempt to Modify Tuple (this will raise an error)
+try:
+    #   Append 10 to the tuple
+    numbers_tuple.append(10)
+except AttributeError:
+    print("Tuples are immutable and cannot be modified.")
+try:
+    #   Insert 20 at index 2
+    numbers_tuple.insert(2, 20)
+except AttributeError:
+    pass  # Insert operation will also raise an error
+try:
+    #   Remove one element  from the tuple
+    numbers_tuple.remove(8)
+except AttributeError:
+    pass  # Remove operation will also raise an error
+
+# Print Output
+print("Modified list:", numbers_list)
+print("Tuple remains unchanged:", numbers_tuple)
 
 """--------------------------------------------------------------------------------
 1. **Set**:
