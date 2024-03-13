@@ -108,41 +108,41 @@ Extend the previous Python program to demonstrate the manipulation of lists usin
   ```
 """
 
-# Input
-input_numbers = input("Enter a series of space-separated integers: ")
-
-# Convert Input
-numbers_list = [int(num) for num in input_numbers.split()]
-numbers_tuple = tuple(numbers_list)
-
-# Manipulate List
-#   Append 10 to the list
-numbers_list.append(10)
-#   Insert 20 at index 2
-numbers_list.insert(2, 20)
-#   Remove one elementfrom the list
-numbers_list.remove(8)
-
-# Attempt to Modify Tuple (this will raise an error)
-try:
-    #   Append 10 to the tuple
-    numbers_tuple.append(10)
-except AttributeError:
-    print("Tuples are immutable and cannot be modified.")
-try:
-    #   Insert 20 at index 2
-    numbers_tuple.insert(2, 20)
-except AttributeError:
-    pass  # Insert operation will also raise an error
-try:
-    #   Remove one element  from the tuple
-    numbers_tuple.remove(8)
-except AttributeError:
-    pass  # Remove operation will also raise an error
-
-# Print Output
-print("Modified list:", numbers_list)
-print("Tuple remains unchanged:", numbers_tuple)
+# # Input
+# input_numbers = input("Enter a series of space-separated integers: ")
+#
+# # Convert Input
+# numbers_list = [int(num) for num in input_numbers.split()]
+# numbers_tuple = tuple(numbers_list)
+#
+# # Manipulate List
+# #   Append 10 to the list
+# numbers_list.append(10)
+# #   Insert 20 at index 2
+# numbers_list.insert(2, 20)
+# #   Remove one elementfrom the list
+# numbers_list.remove(8)
+#
+# # Attempt to Modify Tuple (this will raise an error)
+# try:
+#     #   Append 10 to the tuple
+#     numbers_tuple.append(10)
+# except AttributeError:
+#     print("Tuples are immutable and cannot be modified.")
+# try:
+#     #   Insert 20 at index 2
+#     numbers_tuple.insert(2, 20)
+# except AttributeError:
+#     pass  # Insert operation will also raise an error
+# try:
+#     #   Remove one element  from the tuple
+#     numbers_tuple.remove(8)
+# except AttributeError:
+#     pass  # Remove operation will also raise an error
+#
+# # Print Output
+# print("Modified list:", numbers_list)
+# print("Tuple remains unchanged:", numbers_tuple)
 
 """--------------------------------------------------------------------------------
 1. **Set**:
@@ -199,39 +199,52 @@ Additionally, introduce sets and dictionaries and perform basic operations on th
   ```
 """
 
-# # Input
-# input_numbers = input("Enter a series of space-separated integers: ")
-#
-# # Convert Input
-#
-# # Manipulate List
-# # Append 10 to the list
-# # Insert 20 at index 2
-# # Remove the element 8
-#
-# # Attempt to Modify Tuple (this will raise an error)
-# try:
-#     # Append 10 to the tuple
-# except AttributeError:
-#     print("Tuples are immutable and cannot be modified.")
-#
-# # Set Operations
-# # Union
-# # Intersection
-# # Difference
-#
-# # Dictionary Operations
-# print("Original Dictionary:", numbers_dict)
-# # Add a new key-value pair
-# # Delete an existing key-value pair
-#
-# # Print Output
-# print("Modified list:", numbers_list)
-# print("Tuple remains unchanged:", numbers_tuple)
-# print("Union of set:", set_union)
-# print("Intersection of set:", set_intersection)
-# print("Difference of set:", set_difference)
-# print("Updated Dictionary:", numbers_dict)
+# Input
+input_numbers = input("Enter a series of space-separated integers: ")
+
+# Convert Input to List
+numbers_list = list(map(int, input_numbers.split()))
+
+# Convert List to Set
+numbers_set = set(numbers_list)
+
+# Convert List to Dictionary
+numbers_dict = {num: num**2 for num in numbers_list}
+
+# Manipulate List
+numbers_list.append(10)
+numbers_list.insert(2, 20)
+numbers_list.remove(8)
+
+# Attempt to Modify Tuple (this will raise an error)
+try:
+    numbers_tuple = tuple(numbers_list)
+    numbers_tuple.append(10) # This line will cause an error
+except AttributeError:
+    print("Tuples are immutable and cannot be modified.")
+
+# Set Operations
+set_union = numbers_set.union({10, 11, 12})
+set_intersection = numbers_set.intersection({8, 5})
+set_difference = numbers_set.difference({9})
+
+# Dictionary Operations
+print("Original Dictionary:", numbers_dict)
+
+# Add a new key-value pair
+numbers_dict[11] = 121
+
+# Delete an existing key-value pair
+del numbers_dict[8]
+
+# Print Output
+print("Modified list:", numbers_list)
+print("Tuple remains unchanged:", numbers_tuple)
+print("Union of set:", set_union)
+print("Intersection of set:", set_intersection)
+print("Difference of set:", set_difference)
+print("Updated Dictionary:", numbers_dict)
+
 
 """7. **Built-in Types and Type Conversion**
 
