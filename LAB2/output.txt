@@ -1,0 +1,28 @@
+Student Number: s28094
+
+Original List: [1, 2, 8, 9, 20]
+Original Tuple: (1, 2, 8, 9, 20)
+Original Set: {1, 2, 8, 9, 30}
+Original Dictionary: {1: 1, 2: 4, 8: 64, 9: 81, 100: 10000}
+
+Manipulated List: [1, 2, 8, 9, 20]
+Manipulated Tuple: (1, 2, 8, 9, 20)
+Union of Set: {1, 2, 8, 9, 10, 11, 12, 30}
+Intersection of Set: {8}
+Difference of Set: {8, 1, 2, 30}
+Updated Dictionary: {1: 1, 2: 4, 8: 64, 9: 81, 100: 10000}
+
+List to Tuple: (1, 2, 8, 9, 20)
+List to Set: {1, 2, 8, 9, 20}
+List to Dictionary: {1: 1, 2: 4, 8: 64, 9: 81, 20: 400}
+Tuple to List: [1, 2, 8, 9, 20]
+Tuple to Set: {1, 2, 8, 9, 20}
+Tuple to Dictionary: {1: 1, 2: 4, 8: 64, 9: 81, 20: 400}
+Set to List: [1, 2, 8, 9, 30]
+Set to Tuple: (1, 2, 8, 9, 30)
+Set to Dictionary: {1: 1, 2: 4, 8: 64, 9: 81, 30: 900}
+Dictionary to List: [1, 2, 8, 9, 100]
+Dictionary to Tuple: (1, 2, 8, 9, 100)
+Dictionary to Set: {1, 2, 100, 8, 9}
+
+Additional line added to the file.
